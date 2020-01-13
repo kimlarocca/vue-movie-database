@@ -1,4 +1,4 @@
-# vue-movie-database2
+# vue-movie-database
 
 ## Project setup
 ```
