@@ -1,7 +1,7 @@
 <template>
     <div class="movie-card" @click="toggleDetails">
         <img :src="'https://image.tmdb.org/t/p/w500'+image" :alt="title">
-        <h2>{{ title }}</h2>
+        <h2>{{ title | uppercase }}</h2>
         <div class="details" v-if="visible">
             <a class="button">X</a>
             <p>{{ overview }}</p>
@@ -24,6 +24,11 @@
         methods: {
             toggleDetails () {
                 this.visible = !this.visible
+            }
+        },
+        filters: {
+            uppercase(str){
+                return str.toUpperCase()
             }
         }
     }
